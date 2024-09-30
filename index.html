@@ -9,6 +9,27 @@
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@latest"></script>
+    <style>
+        /* Styles pour rendre la vidéo responsive */
+        .hls-stream iframe, 
+        .hls-stream video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        /* Styles supplémentaires pour petits écrans (mobile) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .video-title {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,17 +38,14 @@
     </header>
 
     <div class="container">
-        <!-- Cadre pour le titre du film -->
+        <!-- Cadre du titre de la vidéo -->
         <div class="video-title">
-            <h2>Nom du Film : Le Mystère d'OwlLive</h2>
+            <p>Film en cours : Titre du film</p>
         </div>
 
-        <!-- Section Vidéo HLS -->
+        <!-- Section Vidéo HLS avec iframe -->
         <div class="hls-stream">
-            <video id="my-video" class="video-js" controls preload="auto" width="720" height="480"
-                data-setup='{"controls": true, "autoplay": false, "preload": "auto"}'>
-                <source src="http://88.177.149.159:8080/memfs/03672057-5147-4a1b-81c8-bb47cacc45fc.m3u8" type="application/x-mpegURL">
-            </video>
+            <iframe src="http://88.177.149.159:8080/03672057-5147-4a1b-81c8-bb47cacc45fc.html" width="640" height="360" frameborder="no" scrolling="no" allowfullscreen="true"></iframe>
         </div>
     </div>
 </body>
