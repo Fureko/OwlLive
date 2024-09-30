@@ -1,0 +1,85 @@
+/* Palette de couleurs */
+:root {
+    --dark-blue: #17153B;
+    --purple: #2E236C;
+    --light-purple: #433D8B;
+    --pastel-purple: #C8ACD6;
+}
+
+/* Style global */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-blue);
+    color: white;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--purple);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    color: var(--pastel-purple);
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column; /* Modification pour aligner les éléments verticalement */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Section pour le lecteur vidéo HLS */
+.hls-stream {
+    background-color: var(--light-purple);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour le cadre du titre de la vidéo */
+.video-title {
+    background-color: var(--light-purple);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section stream YouTube */
+.youtube-stream {
+    background-color: var(--light-purple);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section chat YouTube */
+.youtube-chat {
+    background-color: var(--light-purple);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: var(--purple);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
